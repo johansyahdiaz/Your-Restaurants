@@ -247,6 +247,8 @@ main {
 .posts {
   margin: 32px auto auto;
   text-align: left;
+  display: grid;
+  grid-row-gap: 16px;
 }
 
 /*
@@ -292,7 +294,7 @@ main {
 #link-title{
   min-width: 44px;
   min-height: 44px;
-  font-size: 33px;
+  font-size: 32px;
 }
 .post-item__title:hover {
   opacity: 0.5;
@@ -331,9 +333,57 @@ footer {
 }
 
 
-/* responsive */
-.posts {
-  display: grid;
-  grid-row-gap: 16px;
+/* Detail Page */
+
+.detail{
+  margin: 0 auto;
+  width: 100%;
+
 }
 
+.detail-page-title {
+  font-size: 50px;
+  font-weight:bold;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 16px;
+  display: block;
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+
+.title-detail{
+  font-size: 44px;
+  text-align: center;
+}
+
+.detail img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.detail h3{
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.detail h4{
+  font-size: 25px;
+}
+
+.detail h5{
+  font-size: 20px;
+}
+
+.detail p{
+font-size: 18px;
+text-align: justify;
+}
+
+.detail li{
+  font-size: 18px;
+}

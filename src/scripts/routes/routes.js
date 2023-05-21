@@ -1,10 +1,9 @@
 import Restaurants from '../views/pages/restaurant-list';
-
 import Detail from '../views/pages/detail';
 
 const routes = {
   '/': Restaurants, // default page
-  '/now-playing': Restaurants,
+  '/restaurant-list': Restaurants,
   '/detail/:id': Detail,
 };
 
