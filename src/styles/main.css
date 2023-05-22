@@ -338,6 +338,7 @@ footer {
 .detail{
   margin: 0 auto;
   width: 100%;
+  padding: 5%;
 
 }
 
@@ -362,7 +363,8 @@ footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 
 .detail h3{
@@ -386,4 +388,28 @@ text-align: justify;
 
 .detail li{
   font-size: 18px;
+}
+
+/* like */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+#like{
+  padding: 5%;
 }
