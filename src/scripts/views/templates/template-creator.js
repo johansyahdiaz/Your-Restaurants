@@ -35,7 +35,7 @@ const createRestaurantsItemTemplate = (restaurants) => `
 <article class="post-item">
 <img class="post-item__thumbnail" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"></img>
 <div class="post-item__content">
-  <p class="post-item__date"> Food Rated  <span href="#" class="post-item__date__author">${restaurants.rating}</span>
+  <p class="post-item__date"> Restaurant Rated  <span href="#" class="post-item__date__author">${restaurants.rating}</span>
   </p>
   <h1 class="post-item__title"><a href="/#/detail/${restaurants.id}" id=link-title>${restaurants.name}</a></h1>
   <p class="post-item__description">${restaurants.description}</p>
