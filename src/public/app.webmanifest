@@ -1,10 +1,10 @@
 {
+    "id": "restaurant-catalogue-lite-pwa-1",
     "theme_color": "#b8e986",
     "background_color": "#ffffff",
     "display": "standalone",
-    "scope": "/",
     "start_url": "./index.html",
-    "name": "app",
+    "name": "app restaurant",
     "short_name": "Restaurant App",
     "description": "catalogue restaurant",
     "icons": [
