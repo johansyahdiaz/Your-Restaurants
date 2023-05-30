@@ -24,6 +24,13 @@
       width: 100%;
       text-align: center;
     }
+  .hero{
+    background-image:url(../public/images/heros/hero-image_4-small.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
   }
   
   @media(min-width: 455px) {
@@ -79,8 +86,17 @@
       max-width: 800px;
       margin: 0 auto;
     }
+
+    .hero{
+      background-image:url(../public/images/heros/hero-image_4-medium.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
   }
   
+
   @media screen and (min-width: 900px) {
     .headline {
       display: grid;
@@ -95,6 +111,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .hero{
+      background-image:url(../public/images/heros/hero-image_4-large.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
   
   @media (min-width: 1200px) {
@@ -106,4 +129,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
+
+
   }

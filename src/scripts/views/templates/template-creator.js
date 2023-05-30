@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="title-detail">${restaurant.name}</h2>
-  <img class="restaurant__img" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+  <img class="restaurant__img lazyload" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
   <div class="restaurant__info">
     <h3>Information</h3>
     <h4>Deskripsi Restaurants</h4>
@@ -31,26 +31,26 @@ const createRestaurantDetailTemplate = (restaurant) => `
   </div>
 `;
 
-const createRestaurantsItemTemplate = (restaurants) => `
+const createRestaurantsItemTemplate = (restaurant) => `
 <article class="post-item">
-<img class="post-item__thumbnail" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"></img>
+<img class="post-item__thumbnail lazyload" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}"></img>
 <div class="post-item__content">
-  <p class="post-item__date"> Restaurant Rated  <span href="#" class="post-item__date__author">${restaurants.rating}</span>
+  <p class="post-item__date"> Restaurant Rated  <span href="#" class="post-item__date__author">${restaurant.rating}</span>
   </p>
-  <h1 class="post-item__title"><a href="/#/detail/${restaurants.id}" id=link-title>${restaurants.name}</a></h1>
-  <p class="post-item__description">${restaurants.description}</p>
+  <h1 class="post-item__title"><a href="/#/detail/${restaurant.id}" id=link-title>${restaurant.name}</a></h1>
+  <p class="post-item__description">${restaurant.description}</p>
 </div>
 </article>
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

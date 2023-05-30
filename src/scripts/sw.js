@@ -1,13 +1,27 @@
-import { precacheAndRoute } from 'workbox-precaching';
+import 'regenerator-runtime';
+import CacheHelper from './utils/cache-helper';
 
-// Do precaching
-precacheAndRoute(self.__WB_MANIFEST);
+// Daftar asset yang akan dicaching
+const assetsToCache = [
+  './',
+  './icons/icon-192x192.png',
+  './icons/icon-256x256.png',
+  './icons/icon-384x384.png',
+  './icons/icon-512x512.png',
+  './favicon.png',
+  './app.bundle.js',
+  './app.webmanifest',
+  './sw.bundle.js',
+];
 
-self.addEventListener('install', () => {
-  console.log('Service Worker: Installed');
-  self.skipWaiting();
+self.addEventListener('install', (event) => {
+  event.waitUntil(CacheHelper.cachingAppShell([...assetsToCache]));
 });
 
-self.addEventListener('push', () => {
-  console.log('Service Worker: Pushed');
+self.addEventListener('activate', (event) => {
+  event.waitUntil(CacheHelper.deleteOldCache());
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(CacheHelper.revalidateCache(event.request));
 });
