@@ -5,7 +5,6 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
-
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
