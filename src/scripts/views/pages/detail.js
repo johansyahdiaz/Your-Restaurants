@@ -27,7 +27,7 @@ const Detail = {
         description: restaurant.description,
         city: restaurant.city,
         address: restaurant.address,
-        picture: restaurant.pictureId,
+        pictureId: restaurant.pictureId,
         categories: restaurant.categories,
         menus: restaurant.menus,
         rating: restaurant.rating,
