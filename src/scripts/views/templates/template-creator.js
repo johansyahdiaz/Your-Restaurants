@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="title-detail">${restaurant.name}</h2>
-  <img class="restaurant__img lazyload" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+  <img class="restaurant__img lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
   <div class="restaurant__info">
     <h3>Information</h3>
     <h4>Deskripsi Restaurants</h4>
@@ -33,7 +33,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantsItemTemplate = (restaurant) => `
 <article class="post-item">
-<img class="post-item__thumbnail lazyload" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}"></img>
+<img class="post-item__thumbnail lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
 <div class="post-item__content">
   <p class="post-item__date"> Restaurant Rated  <span href="#" class="post-item__date__author">${restaurant.rating}</span>
   </p>
